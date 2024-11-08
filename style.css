@@ -1,0 +1,367 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Rengard Free"
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+#main {
+    background-color: black;
+}
+
+#loader {
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(183, 183, 16);
+    color: white;
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+    /* display: none; */
+    z-index: 99;
+}
+
+ #loader h1 {
+   font-size: 5vw; 
+   line-height: 5.8vw;
+   letter-spacing: 0.2vw;
+   font-weight: 100;
+   position: relative;
+   z-index: 9;
+   letter-spacing: 5px;
+}
+
+#yellow {
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    background-color: rgb(171, 171, 18);
+    z-index: 8;
+}
+
+#black2 {
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    background-color: black;
+    z-index: 7;
+}
+
+#loader video {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    object-fit: cover;
+    z-index: 6;
+}
+
+nav{
+    width: 100%;
+    z-index: 10;
+    color: white;
+    position: absolute;
+    /* background-color: black; */
+    padding: 30px 50px;
+}
+
+nav h3 {
+    font-size: 2vw;
+    text-transform: uppercase;
+    font-weight: 1000;
+}
+
+#page1 {
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+    color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#page1 h1 {
+   font-size: 5vw; 
+   line-height: 5.8vw;
+   letter-spacing: 0.2vw;
+   font-weight: 100;
+   letter-spacing: 5px;
+}
+
+#page2 {
+    height: 120vh;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column; 
+    background-size: cover;
+    background-position: center;
+}
+
+.elem {
+    /* background-color: red; */
+    width: 100%;
+    position: relative;
+}
+
+.elem a {
+    text-decoration: none;
+    color: black;
+}
+
+.elem h2 {
+    font-size: 2vw;
+    text-transform: uppercase;
+    font-weight: 600;
+    position: relative;
+    z-index: 9;
+    line-height: 5vw;
+}
+
+.elem .moving {
+    /* display: inline-block; */
+    background-color: yellow;
+    width: 100%;
+    white-space: nowrap;
+    padding: 5px 0;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -45%) scaleY(0);
+    transition: all ease 0.5s;
+    overflow: hidden;
+}
+
+.elem .moving .moving-in {
+    /* background-color: lightsalmon; */
+    display: inline-block;
+    white-space: nowrap;
+    animation: moving 15s linear infinite; 
+}
+
+.elem .moving .moving-in h5 {
+    color: black;
+    display: inline-block;
+    text-transform: uppercase;
+    font-family: normal;
+    font-size: 15px;
+    margin-right: 40px;
+    letter-spacing: 1.5px;
+    font-weight: 100;
+}
+
+@keyframes moving {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+    
+}
+
+.elem .blur {
+    position: absolute;
+    width: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    height: 100%;
+    z-index: 8;
+    background: linear-gradient(to right, rgba(255, 255, 0, 0.908), yellow, rgba(255, 255, 0, 0.908));
+    box-shadow: 10px 0px 20px rgba(255, 255, 0, 0.908);
+}
+
+.elem:hover .moving {
+    transform: translate(0, -45%) scaleY(1);
+}
+
+.elem:hover h2 {
+    font-size: 5vw;
+    font-style: italic;
+    color: rgb(255, 0, 0);
+    font-weight: 1000;
+}
+
+
+#page3 {
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#page3-content {
+   height: 100vh; 
+   width: 80%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+}
+
+#page3-content p{
+    text-transform: uppercase;
+    font-size: 3vw;
+    color: rgb(255, 255, 255);
+    font-family: 'Courier New', Courier, monospace;
+    font-weight:100;
+}
+
+
+#page4 {
+    min-height: 100vh;
+    width: 100%;
+    /* background-color: black; */
+    color: white;
+    /* font-family: 'Courier New', Courier, monospace; */
+}
+
+.marquee {
+    width: 100%;
+    margin: 0 auto;
+    white-space: nowrap;
+    overflow: hidden;
+    padding-top: 1.2em;
+}
+
+.marquee span {
+    font-family: "Monument Extended";
+    font-weight: 700;
+    color: #ff4c00;
+    font-size: 8em;
+    text-transform: uppercase;
+    display: inline-block;
+    padding-left: -10%;
+    animation: marquee-animation 80s linear infinite;
+}
+
+@keyframes marquee-animation {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(-100%, 0);
+    }
+}
+
+.col {
+    width: 50%;
+    padding: 1em 3em;
+    text-transform: uppercase;
+}
+
+.contact-section h3 {
+    text-transform: uppercase;
+    color: #747474;
+    font-family: monospace;
+    font-weight: 900;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.contact-section span {
+    text-transform: uppercase;
+}
+
+.contact-details p {
+    font-size: 40px;
+    line-height: 60px;
+    line-height: 60px;
+    padding-top: 0.8em;
+}
+
+.item {
+    padding: 4em 0 0 0;
+    font-size: 1vw;
+}
+
+.contact-info {
+    display: flex;
+}
+
+.email a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.email a:hover {
+    color: rgb(95, 224, 205);
+}
+
+.address {
+    font-family: 'Courier New', Courier, monospace;
+    padding-left: 4em;
+}
+
+input {
+    background: none;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #747474;
+    font-size: 24px;
+    padding: 0.4em;
+    width: 100%;
+    color: #fff;
+    margin-bottom: 0.4em;
+    font-family: monospace;
+}
+
+select {
+    background: black;
+    color: #747474;
+    width: 100%;
+    border: none;
+    font-size: 20px;
+    border-bottom: 1px solid #747474;
+    margin-bottom: 0.5em;
+    font-family: monospace;
+}
+
+.row {
+    display: flex;
+    margin: 2em 0 !important;
+}
+
+textarea#message {
+    width: 100%;
+    background: none;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #747474;
+    font-size: 24px;
+    padding: 0.4em;
+    color: #fff;
+    font-family: monospace;
+}
+
+.submit {
+    width: 100%;
+    justify-content: space-between;
+}
+
+.submit-btn {
+    background-color: black;
+    color: #fff;
+    font-family: "Monument Extended";
+    font-size: 60px;
+    font-weight: 500;
+    text-transform: uppercase;
+    border: none;
+}
