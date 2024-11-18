@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'arcadeclassicregular';
-    src: url('.webfontkit/arcadeclassic-webfont.woff2') format('woff2'),
-         url('.webfontkit/arcadeclassic-webfont.woff') format('woff');
+    src: url('./webfontkit/arcadeclassic-webfont.woff2') format('woff2'),
+         url('./webfontkit/arcadeclassic-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
